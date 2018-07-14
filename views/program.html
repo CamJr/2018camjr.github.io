@@ -1,0 +1,96 @@
+<div class="section">
+
+  <!-- BIO  -->
+  <div class="slide center">
+
+      <div class="slider container">
+        <ul class="slides">
+          <li ng-repeat="card in vm.card1">
+            <a ng-href="/#/pageProgram/{{card.id}}"><img ng-src="{{card.img}}"></a>
+          </li>
+      </div>
+
+
+    <h2 id="role">Developpeur Web</h2>
+  </div>
+</div>
+
+
+
+  <div class="section center">
+            <h1>Timeline</h1>
+
+            <div class="col s3">
+              <i class="fas fa-child"></i>
+            </div>
+
+            <div class="col s3">
+              <a href="https://www.linkedin.com/in/camfontaine/"><i class="fab fa-school fa-5x"></i></a>
+            </div>
+
+            <div class="col s3">
+              <a href="https://www.twitter.com/camAntoineJr/"><i class="fab fa-twitter fa-5x"></i></a>
+            </div>
+
+            <div class="col s3">
+              <a href="https://www.instagram.com/camantoinejr/"><i class="fab fa-instagram fa-5x"></i></a>
+            </div>
+
+  </div>
+
+
+
+
+
+
+
+<div class="section">
+  <h1 class="center text">Projets</h1>
+  <div class="container">
+    <div ng-repeat="card in vm.card  | filter:searchText" id="{{ 'program-' + card.id }}" class="col s3">
+      <div class="card">
+        <div class="card-image">
+          <a ng-href="/#/pageProgram/{{card.id}}"><img ng-src="{{card.img}}"></a>
+        </div>
+        <div class="card-content">
+          <span class="card-title">{{card.title}}</span>&nbsp;
+          <p class="chip right">{{card.tag}}</i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section row">
+  <div class="center">
+    <h1 class="center text">Photographie  <a href="https://www.instagram.com/camantoinejr/"><i class="fab fa-instagram fa-1x"></i></a></h1>
+  </div>
+  <div id="instafeed"><br></div>
+  <div class="center">
+    <a class="waves-effect waves-light">instagram.com/camantoinejr</a>
+  </div>
+</div>
+
+
+
+<div class="section center">
+          <h1>Contact</h1>
+
+          <div class="col s3">
+            <a href="https://www.instagram.com/camantoinejr/"><i class="fab fa-github fa-5x"></i></a>
+          </div>
+
+          <div class="col s3">
+            <a href="https://www.linkedin.com/in/camfontaine/"><i class="fab fa-linkedin fa-5x"></i></a>
+          </div>
+
+          <div class="col s3">
+            <a href="https://www.twitter.com/camAntoineJr/"><i class="fab fa-twitter fa-5x"></i></a>
+          </div>
+
+          <div class="col s3">
+            <a href="https://www.instagram.com/camantoinejr/"><i class="fab fa-instagram fa-5x"></i></a>
+          </div>
+
+        </div>
