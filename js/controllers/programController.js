@@ -73,18 +73,39 @@ function programController() {
   $(document).ready(function(){
 
 
-      $(document).ready(function(){
         $('.slider').slider({
           indicators:false,
           interval: 900,
         });
+      $('#fullpage').fullpage({
+        navigation: true,
       });
 
-                  $('#fullpage').fullpage({
-                    menu: '#menu',
-                    navigation: true,
-                    // slidesNavigation: true,
-                  });
+
+      var userFeed = new Instafeed({
+          get: 'user',
+          userId: '1697317359',
+          limit: 12,
+          resolution: 'low_resolution',
+          accessToken: '1697317359.1677ed0.035030b365cf49769bb3f7f3099469e8',
+          sortBy: 'most-recent',
+          template: '<div class="center col s4 instaimg"><a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
+      });
+
+
+      userFeed.run();
+
+
+      // This will create a single gallery from all elements that have class "gallery-item"
+      $('.gallery').magnificPopup({
+          type: 'image',
+          delegate: 'a',
+          gallery: {
+              enabled: true
+          }
+      });
+
+
 
                   $(function($) {
                     var roles = [

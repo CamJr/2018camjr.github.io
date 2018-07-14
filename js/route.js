@@ -11,19 +11,6 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             controller: 'pageProgramController',
             controllerAs: 'vm'
         })
-        .when('/team', {
-          templateUrl: 'views/team.html',
-          controller: 'teamController',
-          controllerAs: 'vm'
-        })
-        .when('/contact', {
-            templateUrl: 'views/contact.html',
-            controller: 'contactController',
-            controllerAs: 'vm'
-        })
-        .when('/store', {
-            templateUrl: 'views/store.html'
-                  })
         .otherwise({
             redirectTo: '/'
         });
